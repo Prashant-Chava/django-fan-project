@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ### 4. Configure environment variables
 cp .env.example .env
-# Then open .env and fill in your credentials
+- Then open .env and fill in your credentials
 
 ### 5. Run database migrations
 ```
@@ -52,14 +52,16 @@ python manage.py runserver
 
 ### Celery + Redis Setup
 ## Start Redis server (on WSL or installed natively), then run:
-```celery -A myproject worker --loglevel=info --pool=solo
+```
+celery -A myproject worker --loglevel=info --pool=solo
 ```
 
 ### Telegram Bot Setup
-  Create a bot with @BotFather
-  Add the bot token to your .env
-  Run the bot:
+  - Create a bot with @BotFather
+  - Add the bot token to your .env
+  - Run the bot:
 
-  ``` python -m telegrambot.bot
+  ``` 
+  python -m telegrambot.bot
   ```
 Now send /start to the bot in Telegram — your username will be saved.
